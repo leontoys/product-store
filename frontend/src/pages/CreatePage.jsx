@@ -1,8 +1,10 @@
 import { useState } from "react";
 // Importing toastify module
 import { ToastContainer, toast } from 'react-toastify';
+import productService from "../services/product.service.js"
 
 const CreatePage = ()=>{
+	//new one
 	const [newProduct, setNewProduct] = useState({
 		name: "",
 		price: "",
@@ -11,18 +13,21 @@ const CreatePage = ()=>{
 
     const handleAddProduct = async (event) => {
         event.preventDefault()
-        toast.success('🦄 Wow so easy!', {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: true,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            });
+		console.log("new",newProduct)
+		const response = await productService.create(newProduct)
+		console.log("service-response",response)
+		//success
+		if(response.success){
+
+		}//error
+		else{
+
+		}
+
     }
 
 	return (    <div className="create">
-                    <form className="create-form">
+                    <form className="create-form" onSubmit={handleAddProduct}> 
                         <h1>Create New Product</h1>
                         <div className="create-form-name">
                             <label>Name:</label>
