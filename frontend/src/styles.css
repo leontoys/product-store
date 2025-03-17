@@ -1,0 +1,66 @@
+*{
+    margin : 0px;
+    padding : 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.nav-bar{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#product-store{
+    font-style: bold;
+}
+
+.nav-bar-left{
+    width: 50vh;
+    margin-left: 5rem;
+}
+
+.nav-bar-right{
+    display: flex;
+    margin-left: 50rem;
+    justify-content: space-around;
+    gap:0.5rem;
+}
+
+.create{
+    display: flex;
+    margin-left:50vh;
+    margin-top:5vh;
+}
+
+.create-form{
+    border: 1px solid;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap : 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-form>h1{
+    font-size: 2rem;
+    font-style: bold;
+}
+
+.create-form input{
+    margin-left: 1rem;
+    border : 1px solid;
+    border-radius: 0.5rem;
+    width: 50vh;
+}
+
+.create-form button{
+    border: 1px solid;
+    border-radius: 1rem;
+}
