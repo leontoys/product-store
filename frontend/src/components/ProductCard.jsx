@@ -11,7 +11,10 @@ const ProductCard = (props)=>{
 
     console.log("delete",typeof deleteProduct)
 
-    const handleEdit = (id)=>{
+    const handleEdit = ()=>{
+        //this will set the state variable to true
+        //so the compenent will re-render
+        //then the dialog will open
         setIsModalOpen(true)
     }
 

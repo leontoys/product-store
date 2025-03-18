@@ -19,7 +19,7 @@ const Navbar = () => {
 					</button>
 				</Link>
 				<button onClick={toggleColorMode}>
-					{colorMode === "light" ? <IoMoon /> : <LuSun size='20' />}
+					{colorMode === "light" ? <IoMoon /> : <LuSun />}
 				</button>
 
             </span>            
