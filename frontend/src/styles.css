@@ -11,7 +11,6 @@ body{
     display: flex;
     flex-direction: column;
     color : #00f;
-    height: 100vh;
 }
 
 .nav-bar{
@@ -28,12 +27,14 @@ body{
 
 .nav-bar-left{
     width: 50vh;
+    padding : 1rem;
 }
 
 .nav-bar-right{
     display: flex;
     justify-content: space-around;
     gap:0.5rem;
+    padding : 1rem;
 }
 
 .create{
@@ -75,7 +76,7 @@ body{
 }
 
 .home-page{
-    width: 60%;
+    width: 70%;
     margin : 0 auto;
 }
 

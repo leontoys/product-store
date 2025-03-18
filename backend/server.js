@@ -8,6 +8,8 @@ import productRouter from "./routes/product.router.js"
 //express app
 const app = express()
 
+//to show UI
+app.use(express.static('dist'))
 //middleware
 app.use(express.json())
 //everything moved to router

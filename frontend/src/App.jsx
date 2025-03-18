@@ -35,10 +35,10 @@ function App() {
     //success
     if (response.success) {
       setProducts([...products, response.data.data])//add new
-      toast("Product Created")
+      //toast("Product Created")
     }//error
     else {
-      toast.error("Error: Product NOT Created")
+      //toast.error("Error: Product NOT Created")
     }
 
   }
@@ -48,12 +48,12 @@ function App() {
     const response = await productService.updateItem(updatedProduct)
     //success
     if (response.success) {
-      toast.success("Product Updated")
+      //toast.success("Product Updated")
       let updatedProducts = products.map(product => product._id === updatedProduct._id ? updatedProduct : product)
       setProducts(updatedProducts)//update items
     }//error
     else {
-      toast.error("Error: Product NOT Updated")
+      //toast.error("Error: Product NOT Updated")
     }
   }
 
@@ -62,12 +62,12 @@ function App() {
     const response = await productService.deleteItem(id)
     //success
     if (response.success) {
-      toast.success("Product Deleted")
+      //toast.success("Product Deleted")
       let updatedProducts = products.filter(product => product._id !== id)
       setProducts(updatedProducts)//update items
     }//error
     else {
-      toast.error("Error: Product NOT Deleted")
+      //toast.error("Error: Product NOT Deleted")
     }
   }
 

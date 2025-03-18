@@ -5,7 +5,6 @@ export const getProducts = async (req,res)=>{
     console.log("get all products")
     try {
         const response = await Product.find({})
-        console.log("response",response)
         res.status(200).json({status:true,data:response})
         
     } catch (error) {
