@@ -1,29 +1,22 @@
 import { useState } from "react";
 // Importing toastify module
 import { ToastContainer, toast } from 'react-toastify';
-import productService from "../services/product.service.js"
 
-const CreatePage = ()=>{
-	//new one
+
+const CreatePage = (props)=>{
+
+	const {addProduct} = props
+	  //new product
 	const [newProduct, setNewProduct] = useState({
 		name: "",
 		price: "",
 		image: "",
 	});
 
-    const handleAddProduct = async (event) => {
+    const handleAddProduct = (event) => {
         event.preventDefault()
-		console.log("new",newProduct)
-		const response = await productService.create(newProduct)
-		console.log("service-response",response)
-		//success
-		if(response.success){
-
-		}//error
-		else{
-
-		}
-
+		addProduct(newProduct)
+		setNewProduct({ name: "", price: "", image: "" })//clear
     }
 
 	return (    <div className="create">

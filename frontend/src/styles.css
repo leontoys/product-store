@@ -5,7 +5,12 @@
 }
 
 body{
-    background-color: black;
+    background-color: #000;
+}
+
+.app{
+    color : #00f;
+    height: 100vh;
 }
 
 .nav-bar{
@@ -38,8 +43,8 @@ body{
 }
 
 .create-form{
-    border: 1px solid;
-    padding: 1rem;
+    border: 2px solid;
+    padding: 2rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -58,9 +63,67 @@ body{
     border : 1px solid;
     border-radius: 0.5rem;
     width: 50vh;
+    padding-left: 1rem;
 }
 
 .create-form button{
     border: 1px solid;
     border-radius: 1rem;
+    padding : 1rem;
+    font-weight: bold;
+}
+
+.home-page{
+    width: 60%;
+    margin : 0 auto;
+}
+
+.home-page>h1{
+    font-size: 2rem;
+    font-style: bold;
+    text-align: center;
+}
+
+.product-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-card{
+    margin : 1rem;
+    border : 1px solid black;
+    box-shadow: 1px 2px 2px 1px black;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.product-card>img{
+    width : 30vh;
+    height : 30vh;
+}
+
+.product-card>p{
+    color : #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.edit-delete{
+    display: flex;
+    flex-direction: row;
+    gap : 0.5rem;
+}
+
+.edit{
+    background-color: #00eeff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.delete{
+    background-color: #ff7700;
+    padding: 0.5rem;
+    border-radius: 0.5rem;   
 }

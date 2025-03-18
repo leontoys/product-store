@@ -4,8 +4,9 @@ import mongoose from "mongoose";
 export const getProducts = async (req,res)=>{
     console.log("get all products")
     try {
-        const products = await Product.find({})
-        res.status(201).json({status:true,data:products})
+        const response = await Product.find({})
+        console.log("response",response)
+        res.status(200).json({status:true,data:response})
         
     } catch (error) {
         console.error("Error getting product",error.message)
