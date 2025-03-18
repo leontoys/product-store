@@ -43,8 +43,18 @@ function App() {
 
   }
 
-  const updateProduct = async(id)=>{
-
+  const updateProduct = async(updatedProduct)=>{
+    console.log("id to delete", updatedProduct._id)
+    const response = await productService.updateItem(updatedProduct)
+    //success
+    if (response.success) {
+      toast.success("Product Updated")
+      let updatedProducts = products.map(product=> product._id === updatedProduct._id ? updatedProduct : product)
+      setProducts(updatedProducts)//update items
+    }//error
+    else {
+      toast.error("Error: Product NOT Updated")
+    }
   }
 
   const deleteProduct = async(id)=>{

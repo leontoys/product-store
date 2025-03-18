@@ -50,8 +50,24 @@ const deleteItem = async (id)=>{
     }
 }
 
+const updateItem = async (updatedProduct)=>{
+
+    console.log("item to update",updatedProduct)
+    //call axios
+    try {
+        await axios.put(`${baseUrl}/${updatedProduct._id}`,updatedProduct)
+        return {success:true, message : "Product Updated"}
+
+    } catch (error) {
+        console.error("Error",error.message)            
+        return {success:false, message:error.message}
+
+    }
+}
+
 export default {
     create,
     getAll,
-    deleteItem
+    deleteItem,
+    updateItem
 }

@@ -5,7 +5,6 @@
 }
 
 body{
-    background-color: #000;
 }
 
 .app{
@@ -126,4 +125,8 @@ body{
     background-color: #ff7700;
     padding: 0.5rem;
     border-radius: 0.5rem;   
+}
+
+.update-dialog{
+    margin: auto auto;
 }

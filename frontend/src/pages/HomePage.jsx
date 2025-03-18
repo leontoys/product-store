@@ -1,7 +1,7 @@
 import ProductCard from "../components/ProductCard"
 
 const HomePage = (props)=>{
-    const  {products, deleteProduct, updateProduct }= props
+    const  {products, deleteProduct, updateProduct } = props
     return(
     <div className="home-page">
         <h1>Current Products 🚀</h1>
