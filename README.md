@@ -93,6 +93,10 @@ product-store/
 
 🔗 [Product Store](https://product-store-lfzq.onrender.com)
 
+
+![Demo](store.png)
+
+
 ---
 
 ## 📄 License
